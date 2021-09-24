@@ -1,3 +1,5 @@
+/* eslint-disable eqeqeq */
+/* eslint-disable vars-on-top */
 /* eslint-disable array-callback-return */
 /* Dog and Duck js imported */
 import '../scss/app.scss';
@@ -53,3 +55,18 @@ animalList.map((item, index) => {
  </div> 
      `;
 });
+
+/* Modal closure function */
+
+var modal = document.getElementById('dingoModal');
+
+var closebtn = document.getElementsByClassName('close')[0];
+
+closebtn.onclick = function () {
+  modal.style.display = 'none';
+};
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+};
